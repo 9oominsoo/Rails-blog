@@ -1,0 +1,73 @@
+<div class="colorlib-loader"></div>
+
+<div id="page">
+	<nav class="colorlib-nav" role="navigation">
+		<div class="top-menu">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2">
+						<div id="colorlib-logo">
+							<%= link_to root_path do %>Unapp
+								<% end %>
+						</div>
+					</div>
+					<div class="col-md-10 text-right menu-1">
+						<ul>
+							<li class="active">
+								<%= link_to "Home", pages_about_path %>
+							</li>
+							<li class="has-dropdown">
+								<%= link_to "Work", pages_work_path %>
+									<ul class="dropdown">
+										<li>
+											<%= link_to "Work Grid", pages_work_grid_path %>
+										</li>
+										<li>
+											<%= link_to "Work Grid Without Text", pages_work_grid_without_text_path %>
+										</li>
+									</ul>
+							</li>
+							<li>
+								<%= link_to "Services", pages_services_path %>
+							</li>
+							<li class="has-dropdown">
+								<%= link_to "Board", posts_boardhome_path %>
+									<ul class="dropdown">
+										<li>
+											<%= link_to "create content", posts_new_path %>
+										</li>
+										<li>
+											<%= link_to "show contents", posts_list_path %>
+										</li>
+										<li>
+											<%= link_to "my contents", posts_my_path %>
+										</li>
+										<li>
+											<%= link_to "search content", searches_search_home_path %>
+										</li>
+									</ul>
+							</li>
+							<li>
+								<%= link_to "About", pages_about_path %>
+							</li>
+							<li>
+								<%= link_to "Contact", pages_contact_path %>
+							</li>
+							<% if current_user %>
+								<li>
+										<span style="color:red !important;"><%= current_user.email %>
+								</li>
+								<li>
+										<%= link_to "Sign out", destroy_user_session_path(), method: :delete, style: "color:red !important;" %>
+								</li>
+							<% else %>
+								<li>
+										<%= link_to "Sign in", new_user_session_path, style: "color:red !important;" %>
+								</li>
+							<% end %>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>

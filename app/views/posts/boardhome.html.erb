@@ -1,0 +1,65 @@
+<section id="home" class="video-hero bg-main-1" style="height: 500px;background-size: cover;background-position: center center;background-attachment: fixed;"
+    data-section="home">
+	<div class="overlay"></div>
+	<div class="display-t display-t2 text-center">
+		<div class="display-tc display-tc2">
+			<div class="container">
+				<div class="col-md-12 col-md-offset-0">
+					<div class="animate-box">
+						<h2>Board</h2>
+						<p class="breadcrumbs">
+							<span>
+								<a href="index.html">Home</a>
+							</span>
+							<span>show contents</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<div class="colorlib-work">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 animate-box">
+                <div class="work-grid">
+                    <%= image_tag("work-1.jpg",class:"work-img", alt:"")%>
+
+                        <div class="desc">
+                            <h2>
+                                 <ins><%= link_to "Go to Make list", posts_new_path %></ins>
+                            </h2>
+                            <p>If you want to "make list", click here!
+                            </p>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-4 animate-box">
+                <div class="work-grid">
+                    <%= image_tag("work-2.jpg",class:"work-img", alt:"")%>
+                        <div class="desc">
+                            <h2>
+                                <ins><%= link_to "Go to Show list", posts_list_path %></ins>
+                            </h2>
+                            <p>If you want to see "all list", click here!
+                            </p>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-4 animate-box">
+                <div class="work-grid">
+                    <%= image_tag("work-3.jpg",class:"work-img", alt:"")%>
+                        <div class="desc">
+                            <h2>
+                                <ins><%= link_to "Go to My list" %></ins>
+                            </h2>
+                            <p>If you want to see "your list", click here!
+                            </p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

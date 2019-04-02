@@ -1,0 +1,109 @@
+<section id="home" class="video-hero bg-main-1" style="height: 500px;background-size: cover;background-position: center center;background-attachment: fixed;"
+    data-section="home">
+	<div class="overlay"></div>
+	<div class="display-t display-t2 text-center">
+		<div class="display-tc display-tc2">
+			<div class="container">
+				<div class="col-md-12 col-md-offset-0">
+					<div class="animate-box">
+						<h2>Board</h2>
+						<p class="breadcrumbs">
+							<span>
+								<a href="index.html">Home</a>
+							</span>
+							<span>my contents</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<p>
+    <div class ="container">
+        <div class="row">
+             <div class="col-md-5 col-md-offset-3 text-center colorlib-heading animate-box">
+                <div class="staff-entry">
+                    <%=image_tag("person1.jpg",class:"staff-img", alt: "")%>
+                        <div class="desc">
+                            <h3>Joshua</h3>
+                            <span>Developer</span>
+                            <h4>email address: <%= @user.email %></h4>
+                            <h4>sign in: <%= @user.created_at %></h4>
+                            <p>
+                                <ul class="colorlib-social-icons">
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-linkedin"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="icon-dribbble"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+             </div>
+        </div>
+    </div>
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>title</th>
+                <th>contents</th>
+                <th>created at</th>
+                <th>comments</th>
+                <th>liked</th>
+            </tr>
+            </thead>
+            <tbody>
+                <% @post.each do |post| %>
+                <tr>
+                    <td><%= link_to post.title, post_path(post) %></td>
+                    <td><%= link_to post.body, post_path(post) %></td>
+                    <td><%= link_to post.created_at, post_path(post) %></td>
+                    <td><%= link_to post.likes.size, post_path(post) %></td>
+                </tr>
+                <% end %>
+            </tbody>
+        </table>
+        <hr/>
+        <div class="row">
+                <div class="col-md-12 text-center">
+                    <ul class="pagination">
+                        <li class="disabled">
+                            <a href="#">&laquo;</a>
+                        </li>
+                        <li class="active">
+                            <a href="#">1</a>
+                        </li>
+                        <li>
+                            <a href="#">2</a>
+                        </li>
+                        <li>
+                            <a href="#">3</a>
+                        </li>
+                        <li>
+                            <a href="#">4</a>
+                        </li>
+                        <li>
+                            <a href="#">&raquo;</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </div>

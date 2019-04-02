@@ -1,0 +1,73 @@
+<section id="home" class="video-hero bg-main-1" style="height: 500px;background-size: cover;background-position: center center;background-attachment: fixed;"
+    data-section="home">
+	<div class="overlay"></div>
+	<div class="display-t display-t2 text-center">
+		<div class="display-tc display-tc2">
+			<div class="container">
+				<div class="col-md-12 col-md-offset-0">
+					<div class="animate-box">
+						<h2>Board</h2>
+						<p class="breadcrumbs">
+							<span>
+								<a href="index.html">Home</a>
+							</span>
+							<span>show contents</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<div id="colorlib-contact">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-md-push-4 animate-box">
+				<h2>Post Information</h2>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="contact-info-wrap-flex">
+							<div class="con-info">
+								<p>
+									<span>
+										<i class="icon-location-2"></i>
+									</span> <strong>Title</strong>
+									<br> <%= @post.title %></p>
+							</div>
+							<div class="con-info">
+								<p>
+									<span>
+										<i class="icon-phone3"></i>
+									</span>
+									<strong>Text</strong>
+                  <p><%= @post.body %></p>
+								</p>
+							</div>
+							<div class="con-info">
+								<p>
+									<span>
+										<i class="icon-paperplane"></i>
+									</span>
+									<strong>Created at</strong>
+                  <p><%= @post.created_at %></p>
+								</p>
+							</div>
+							<div class="con-info">
+								<p>
+									<span>
+										<i class="icon-globe"></i>
+									</span>
+                  <strong>Writer</strong>
+                  <p><%= @post.user.email %></p>
+								</p>
+							</div>
+              <%= link_to 'Edit', edit_post_path(@post) %> |
+              <%= link_to 'Back', posts_list_path %>
+						</div>
+					</div>
+				</div>
+			</div>
+  	</div>
+	</div>
+</div>
